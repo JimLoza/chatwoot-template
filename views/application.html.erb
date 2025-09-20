@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="<%= I18n.locale %>" class="w-full h-full">
+<head>
+  <meta charset="utf-8">
+  <meta name="ROBOTS" content="NOODP">
+  <meta name="viewport" content="initial-scale=1">
+  <title>
+    <%= content_for(:title) %> - <%= application_title %>
+  </title>
+  <%= render "stylesheet" %>
+   <link rel="stylesheet" href="/brand-assets/custom.css">
+  <%= vite_client_tag %>
+  <%= vite_javascript_tag 'superadmin' %>
+  <%= csrf_meta_tags %>
+</head>
+<body class="antialiased w-full h-full">
+  <%= render "icons" %>
+  <div class="flex w-full h-full">
+    <%= render "navigation" -%>
+    <main class="w-full overflow-auto" role="main">
+      <%= render "flashes" -%>
+      <%= yield %>
+    </main>
+  </div>
+  <%= render "javascript" %>
+</body>
+</html>

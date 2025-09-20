@@ -1,0 +1,57 @@
+/* ——— Logo del login (claro y oscuro) ——— */
+
+/* Ajusta el tamaño pero respeta display (no tocar block/hidden) */
+#app img[src$="/brand-assets/logo.svg"],
+#app img[src$="/brand-assets/logo_dark.svg"] {
+    height: 128px !important;
+    /* tamaño base */
+    max-height: none !important;
+    width: auto !important;
+    margin-bottom: 16px !important;
+}
+
+/* Super admin: logos claro/oscuro */
+main img[src$="/brand-assets/logo.svg"],
+main img[src$="/brand-assets/logo_dark.svg"] {
+    height: 128px !important;
+    max-height: none !important;
+    width: auto !important;
+    margin-bottom: 16px !important;
+}
+
+
+/* Responsive: aún más grande en pantallas medianas+ */
+@media (min-width: 768px) {
+
+    #app img[src$="/brand-assets/logo.svg"],
+    #app img[src$="/brand-assets/logo_dark.svg"] {
+        height: 144px !important;
+    }
+}
+
+/* Oscuro explícito */
+.dark #app img[src$="/brand-assets/logo_dark.svg"] {
+    height: 144px !important;
+}
+
+
+/* Oculta el texto original del h2 del login */
+#app h2.mt-6.text-3xl.font-medium.text-center.text-n-slate-12 {
+    font-size: 0 !important;
+    line-height: 0 !important;
+}
+
+/* Inserta tu propio texto (hereda el color actual) */
+#app h2.mt-6.text-3xl.font-medium.text-center.text-n-slate-12::after {
+    content: "Inicia Sesion Elegance & Beauty — tu centro de soporte al cliente.";
+    /* <-- tu texto aquí */
+    display: block;
+    font-size: 1.875rem;
+    /* ≈ text-3xl */
+    line-height: 1.2;
+    color: inherit;
+    /* respeta claro/oscuro */
+    text-align: center;
+    letter-spacing: 0;
+    /* opcional: ajusta tracking */
+}
