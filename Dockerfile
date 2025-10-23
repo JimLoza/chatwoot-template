@@ -1,4 +1,4 @@
-FROM chatwoot/chatwoot:v4.5.2
+FROM chatwoot/chatwoot:v4.7.0-ce
 WORKDIR /app
 
 COPY branding/logo.svg /app/public/brand-assets/logo.svg
@@ -14,4 +14,4 @@ COPY public/favicon-32x32.png /app/public/favicon-32x32.png
 COPY installation/index.html.erb /app/app/views/installation/onboarding/index.html.erb
 
 COPY views/vueapp.html.erb    /app/app/views/layouts/vueapp.html.erb
-COPY views/_stylesheet.html.erb /app/app/views/super_admin/application/_stylesheet.html.erb
+COPY views/_stylesheet.html.erb /app/app/views/super_admin/application/_stylesheet.html.erbs
