@@ -1,4 +1,4 @@
-FROM chatwoot/chatwoot:v4.5.2
+FROM chatwoot/chatwoot:v4.7.0-ce
 WORKDIR /app
 
 COPY branding/logo.svg /app/public/brand-assets/logo.svg

@@ -43,7 +43,7 @@ main img[src$="/brand-assets/logo_dark.svg"] {
 
 /* Inserta tu propio texto (hereda el color actual) */
 #app h2.mt-6.text-3xl.font-medium.text-center.text-n-slate-12::after {
-    content: "Inicia Sesion Elegance & Beauty — tu centro de soporte al cliente.";
+    content: "Inicia Sesion Magia y Muebles — tu centro de soporte al cliente.";
     /* <-- tu texto aquí */
     display: block;
     font-size: 1.875rem;
